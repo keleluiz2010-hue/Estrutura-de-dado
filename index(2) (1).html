@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d0c0b">
+<title>Projeto Integrador — Algoritmos de Ordenação</title>
+<style>
+:root{--bg:#0d0c0b;--panel:#171513;--panel2:#201d19;--text:#f4efe5;--muted:#bdb5a9;--gold:#d69a35;--line:#51483a;--green:#9ac7a2;--red:#e29b91}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.55}button,input,select{font:inherit}button{cursor:pointer}.wrap{max-width:1100px;margin:auto;padding:0 22px}.top{padding:44px 0 30px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 80% 0%,#3b2b16 0,transparent 48%)}.eyebrow{text-transform:uppercase;letter-spacing:.18em;color:var(--gold);font-size:.75rem;font-weight:700}.top h1,.section h2{font-family:Georgia,'Times New Roman',serif;text-transform:uppercase;letter-spacing:-.04em;line-height:1.05}.top h1{font-size:clamp(2.2rem,6vw,4.5rem);max-width:850px;margin:12px 0}.top p{color:var(--muted);max-width:700px}.nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.nav a{color:var(--text);text-decoration:none;border:1px solid var(--line);padding:8px 12px;border-radius:5px;font-size:.9rem}.nav a:hover{border-color:var(--gold);color:var(--gold)}.section{padding:42px 0;border-bottom:1px solid #302b24}.section h2{font-size:clamp(1.7rem,4vw,2.6rem);margin:8px 0 12px}.lead{color:var(--muted);max-width:760px}.grid{display:grid;gap:14px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}.card{background:var(--panel);border:1px solid #332e27;padding:18px;border-radius:8px}.card h3{margin:0 0 8px;font-size:1.05rem}.card p{margin:0;color:var(--muted);font-size:.92rem}.gold{color:var(--gold)}.warning{border-left:3px solid var(--gold);padding:14px 16px;background:#1a1712;color:#e7ddcb}.number{font-size:1.2rem;color:var(--gold);font-weight:800}.requirements .card{min-height:140px}.demo{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px}.field{display:flex;flex-direction:column;gap:7px;margin:12px 0}.field label{font-size:.9rem;color:var(--muted)}input,select{width:100%;background:#0d0c0b;color:var(--text);border:1px solid var(--line);border-radius:6px;padding:12px}input:focus,select:focus{outline:2px solid var(--gold);outline-offset:1px}.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}.btn{border:1px solid var(--line);border-radius:6px;padding:10px 14px;background:#25211b;color:var(--text)}.btn.primary{background:var(--gold);border-color:var(--gold);color:#17120a;font-weight:800}.btn:disabled{opacity:.35;cursor:not-allowed}.output{min-height:180px;background:#100f0d;border:1px solid var(--line);border-radius:8px;padding:16px}.bars{display:flex;align-items:end;gap:6px;height:160px;padding:12px 0 24px}.bar{flex:1;min-width:0;background:linear-gradient(180deg,#e7b65c,#9c6722);border-radius:4px 4px 0 0;position:relative;transition:height .25s}.bar span{position:absolute;bottom:-23px;left:50%;transform:translateX(-50%);font-size:.78rem;color:var(--text)}.result-line{padding:9px 0;border-bottom:1px solid #332e27;color:var(--muted)}.result-line strong{color:var(--text)}.status{font-size:.9rem;color:var(--green);margin-top:8px;min-height:22px}.status.error{color:var(--red)}.footer{padding:28px 0;color:var(--muted);font-size:.85rem}.small{font-size:.83rem;color:var(--muted)}.code-note{font-family:ui-monospace,monospace;font-size:.86rem;white-space:pre-wrap;background:#100f0d;padding:14px;border-radius:6px;color:#e5c58d;overflow-wrap:anywhere}
+@media(max-width:760px){.grid.two,.grid.three,.grid.four,.demo{grid-template-columns:1fr}.top{padding-top:32px}.section{padding:32px 0}.wrap{padding:0 16px}.requirements .card{min-height:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<div class="eyebrow">Projeto integrador · Estrutura de dados</div>
+<h1>Criando um site de algoritmos de ordenação</h1>
+<p>Uma aplicação web responsiva para receber números, executar algoritmos de ordenação e comparar os resultados de forma visual e clara.</p>
+<div class="nav"><a href="#objetivo">Objetivo</a><a href="#algoritmos">Algoritmos</a><a href="#codigo">Código</a><a href="#requisitos">Requisitos</a><a href="#demonstracao">Demonstração</a></div>
+</div></header>
+<main>
+<section class="section" id="objetivo"><div class="wrap">
+<div class="eyebrow">01 · Proposta</div><h2>O que você deve demonstrar</h2>
+<p class="lead">Implementar e testar algoritmos de ordenação, mostrar as diferenças entre eles, separar a interface da lógica de processamento e documentar o projeto.</p>
+<div class="grid two">
+<div class="card"> <h3><span class="gold">•</span> Implementação e testes</h3><p>Programar os métodos de ordenação e conferir se os resultados estão corretos.</p></div>
+<div class="card"><h3><span class="gold">•</span> Comparação</h3><p>Diferenciar como cada algoritmo escolhe e organiza os elementos.</p></div>
+<div class="card"><h3><span class="gold">•</span> Interface e lógica</h3><p>Separar a parte visual do código que processa os números.</p></div>
+<div class="card"><h3><span class="gold">•</span> Publicação</h3><p>Usar GitHub, publicar a aplicação e apresentar o projeto no LinkedIn.</p></div>
+</div></div></section>
+<section class="section" id="algoritmos"><div class="wrap">
+<div class="eyebrow">02 · Regra crucial</div><h2>Pelo menos dois algoritmos, implementados por você.</h2><p class="lead">Escolha o método, informe os números e observe a sequência ordenada.</p>
+<div class="grid three">
+<div class="card"><h3>Bubble Sort</h3><p>Compara elementos vizinhos e troca os que estão fora de ordem.</p></div>
+<div class="card"><h3>Selection Sort</h3><p>Encontra o menor elemento restante e o coloca na posição correta.</p></div>
+<div class="card"><h3>Insertion Sort</h3><p>Insere cada elemento na posição correta dentro da parte já ordenada.</p></div>
+<div class="card"><h3>Merge Sort</h3><p>Divide a lista em partes, ordena cada parte e depois combina tudo.</p></div>
+<div class="card"><h3>Quick Sort</h3><p>Usa um pivô para separar os valores menores e maiores e ordenar as partes.</p></div>
+<div class="card"><h3>Importante</h3><p><code>Array.sort()</code> não é usado como implementação principal. Os métodos abaixo são programados em JavaScript.</p></div>
+</div>
+</div></section>
+<section class="section" id="codigo"><div class="wrap">
+<div class="eyebrow">03 · Estrutura do código</div><h2>O que o código precisa deixar claro.</h2><p class="lead">A legibilidade do código-fonte faz parte da avaliação técnica.</p>
+<div class="grid two">
+<div class="card"><span class="number">01</span><h3>Como compara elementos</h3><p>Critérios explícitos de comparação entre os números do vetor.</p></div>
+<div class="card"><span class="number">02</span><h3>Como decide trocar</h3><p>Mecanismo de troca ou deslocamento de valores na memória.</p></div>
+<div class="card"><span class="number">03</span><h3>Como percorre e termina</h3><p>Laços de repetição transparentes e condições precisas de parada.</p></div>
+<div class="card"><span class="number">04</span><h3>Como produz o resultado</h3><p>Retorno do arranjo ordenado, sem efeitos colaterais ocultos.</p></div>
+<div class="card"><span class="number">05</span><h3>Repetidos e negativos</h3><p>Tratamento correto de sinais aritméticos e valores repetidos.</p></div>
+</div>
+<div class="warning" style="margin-top:16px"><strong>Atenção:</strong> a ordenação é feita por funções JavaScript próprias, não pelo método <code>Array.sort()</code>.</div>
+</div></section>
+<section class="section requirements" id="requisitos"><div class="wrap">
+<div class="eyebrow">04 · Checklist</div><h2>Oito funcionalidades obrigatórias.</h2><p class="lead">Marque os itens conforme forem conferidos na apresentação.</p>
+<div class="grid four">
+<div class="card"><span class="number">01</span><h3>Entrada flexível</h3><p>Aceitar números separados por vírgulas ou espaços em branco.</p></div>
+<div class="card"><span class="number">02</span><h3>Validação</h3><p>Tratar entradas incorretas com mensagem de erro compreensível.</p></div>
+<div class="card"><span class="number">03</span><h3>Sentido</h3><p>Permitir escolher ordem crescente ou decrescente.</p></div>
+<div class="card"><span class="number">04</span><h3>Algoritmo</h3><p>Selecionar diretamente o algoritmo desejado.</p></div>
+<div class="card"><span class="number">05</span><h3>Execução</h3><p>Disparar a ordenação por botão sem recarregar a página.</p></div>
+<div class="card"><span class="number">06</span><h3>Comparação</h3><p>Exibir sequência original e ordenada lado a lado.</p></div>
+<div class="card"><span class="number">07</span><h3>Casos básicos</h3><p>Processar repetidos, negativos, vetor vazio e dados inválidos.</p></div>
+<div class="card"><span class="number">08</span><h3>Responsividade</h3><p>Interface simples e adaptável ao computador e ao celular.</p></div>
+</div>
+</div></section>
+<section class="section" id="demonstracao"><div class="wrap">
+<div class="eyebrow">05 · Demonstração visual</div><h2>Exemplo de funcionamento.</h2><p class="lead">Digite números, escolha as opções e execute a ordenação. O resultado aparece abaixo sem atualizar a página.</p>
+<div class="demo">
+<div class="card">
+<div class="field"><label for="numbers">Entrada do usuário</label><input id="numbers" value="8, 3, 10, -2, 3, 1" placeholder="Ex.: 8, 3, 10, -2, 3, 1"></div>
+<div class="field"><label for="algorithm">Algoritmo</label><select id="algorithm"><option value="bubble">Bubble Sort</option><option value="selection">Selection Sort</option><option value="insertion">Insertion Sort</option><option value="merge">Merge Sort</option><option value="quick">Quick Sort</option></select></div>
+<div class="field"><label for="order">Sentido da ordenação</label><select id="order"><option value="asc">Crescente</option><option value="desc">Decrescente</option></select></div>
+<div class="actions"><button class="btn primary" id="run">Ordenar agora</button><button class="btn" id="example">Restaurar exemplo</button><button class="btn" id="clear">Limpar</button></div>
+<div id="status" class="status" role="status" aria-live="polite"></div>
+</div>
+<div class="output"><h3 style="margin-top:0">Visualização dos valores</h3><div id="bars" class="bars" aria-label="Gráfico dos valores ordenados"></div><div id="summary" class="small">Execute a ordenação para ver os resultados.</div></div>
+</div>
+<div class="grid two" style="margin-top:16px">
+<div class="card"><h3>Entrada original</h3><div id="original" class="code-note">8, 3, 10, -2, 3, 1</div></div>
+<div class="card"><h3>Saída ordenada</h3><div id="sorted" class="code-note">-2, 1, 3, 3, 8, 10</div></div>
+</div>
+<div class="card" style="margin-top:16px"><h3>Passos do algoritmo</h3><div id="steps" class="small">Os passos principais aparecerão aqui após a execução.</div></div>
+</div></section>
+<section class="section"><div class="wrap"><div class="eyebrow">06 · Arquitetura web</div><h2>HTML, CSS e JavaScript, sem servidor próprio.</h2>
+<div class="grid three">
+<div class="card"><h3>HTML</h3><p>Estrutura semântica dos elementos e campos de conteúdo.</p></div>
+<div class="card"><h3>CSS</h3><p>Aparência visual, tipografia, organização e adaptação ao celular.</p></div>
+<div class="card"><h3>JavaScript</h3><p>Captura de entrada, validação, ordenação e exibição de resultados.</p></div>
+</div><p class="lead" style="margin-top:16px">Para publicar: crie um repositório no GitHub, envie o arquivo <code>index.html</code> e habilite o GitHub Pages nas configurações do repositório.</p>
+</div></section>
+</main>
+<footer class="footer"><div class="wrap">Projeto Integrador · Algoritmos de Ordenação · Interface responsiva</div></footer>
+<script>
+const $=id=>document.getElementById(id);
+function bubbleSort(a,cmp){a=a.slice();let steps=[];for(let i=0;i<a.length-1;i++){let swapped=false;for(let j=0;j<a.length-i-1;j++){if(cmp(a[j],a[j+1])>0){[a[j],a[j+1]]=[a[j+1],a[j]];swapped=true;steps.push(`Troca ${a[j+1]} e ${a[j]}`)}}if(!swapped)break}return {a,steps}}
+function selectionSort(a,cmp){a=a.slice();let steps=[];for(let i=0;i<a.length-1;i++){let best=i;for(let j=i+1;j<a.length;j++)if(cmp(a[j],a[best])<0)best=j;if(best!==i){let x=a[i];a[i]=a[best];a[best]=x;steps.push(`Posição ${i+1}: colocou ${a[i]}`)}}return {a,steps}}
+function insertionSort(a,cmp){a=a.slice();let steps=[];for(let i=1;i<a.length;i++){let key=a[i],j=i-1;while(j>=0&&cmp(a[j],key)>0){a[j+1]=a[j];j--}a[j+1]=key;steps.push(`Inseriu ${key} na posição ${j+2}`)}return {a,steps}}
+function mergeSort(a,cmp,steps=[]){if(a.length<=1)return {a:a.slice(),steps};let mid=Math.floor(a.length/2),l=mergeSort(a.slice(0,mid),cmp,steps).a,r=mergeSort(a.slice(mid),cmp,steps).a,out=[];while(l.length&&r.length)out.push(cmp(l[0],r[0])<=0?l.shift():r.shift());out.push(...l,...r);steps.push(`Combinou uma parte com ${out.length} elemento(s)`);return {a:out,steps}}
+function quickSort(a,cmp,steps=[]){a=a.slice();function q(lo,hi){if(lo>=hi)return;let pivot=a[hi],i=lo;for(let j=lo;j<hi;j++)if(cmp(a[j],pivot)<=0){[a[i],a[j]]=[a[j],a[i]];i++}[a[i],a[hi]]=[a[hi],a[i]];steps.push(`Pivô ${pivot}: separou a lista`);q(lo,i-1);q(i+1,hi)}q(0,a.length-1);return {a,steps}}
+function run(){const raw=$('numbers').value.trim(),status=$('status');status.classList.remove('error');if(!raw){status.textContent='Digite pelo menos um número.';status.classList.add('error');return}const parts=raw.split(/[,\s;]+/).filter(Boolean),nums=parts.map(Number);if(!nums.length||nums.some(n=>!Number.isFinite(n))){status.textContent='Entrada inválida. Use apenas números separados por vírgulas ou espaços.';status.classList.add('error');return}if(nums.length>100){status.textContent='Use no máximo 100 números para manter a visualização legível.';status.classList.add('error');return}const dir=$('order').value,cmp=(a,b)=>dir==='asc'?a-b:b-a,alg=$('algorithm').value;let result;switch(alg){case'bubble':result=bubbleSort(nums,cmp);break;case'selection':result=selectionSort(nums,cmp);break;case'insertion':result=insertionSort(nums,cmp);break;case'merge':result=mergeSort(nums,cmp);break;default:result=quickSort(nums,cmp)}$('original').textContent=nums.join(', ');$('sorted').textContent=result.a.join(', ');$('summary').textContent=`${nums.length} número(s) · ${$('algorithm').selectedOptions[0].text} · ${dir==='asc'?'crescente':'decrescente'}`;const bars=$('bars');bars.innerHTML='';const min=Math.min(...result.a),max=Math.max(...result.a),range=max-min||1;result.a.forEach((v,i)=>{const b=document.createElement('div');b.className='bar';b.style.height=(24+((v-min)/range)*110)+'px';b.title=String(v);const s=document.createElement('span');s.textContent=v;b.appendChild(s);bars.appendChild(b)});$('steps').textContent=result.steps.length?result.steps.slice(0,18).join(' · ')+(result.steps.length>18?' · …':''):'A lista já está ordenada ou possui apenas um elemento.';status.textContent='Ordenação concluída com sucesso.'}
+$('run').addEventListener('click',run);$('example').addEventListener('click',()=>{$('numbers').value='8, 3, 10, -2, 3, 1';$('algorithm').value='bubble';$('order').value='asc';run()});$('clear').addEventListener('click',()=>{$('numbers').value='';$('original').textContent='—';$('sorted').textContent='—';$('bars').innerHTML='';$('summary').textContent='Execute a ordenação para ver os resultados.';$('steps').textContent='Os passos principais aparecerão aqui após a execução.';$('status').textContent=''});run();
+</script>
+</body></html>
